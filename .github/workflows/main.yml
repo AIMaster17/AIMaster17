@@ -14,8 +14,14 @@ jobs:
     name: Build 3D Profile
     steps:
       - uses: actions/checkout@v4
+
       - name: Run 3D Contrib Action
         uses: yoshi389111/github-profile-3d-contrib@0.9.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          USERNAME: AIMaster17
+          USERNAME: ${{ github.repository_owner }}
+          COMMIT_USERNAME: ${{ github.actor }}
+          COMMIT_EMAIL: ${{ github.actor }}@users.noreply.github.com
+
+      - name: List files for debugging
+        run: ls -R
