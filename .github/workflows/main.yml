@@ -1,22 +1,28 @@
-name: GitHub Metrics
+name: GitHub 3D Profile
 
 on:
   schedule:
     - cron: "0 */12 * * *"
   workflow_dispatch:
-  push:
-    branches:
-      - "main"
 
 jobs:
-  render-metrics:
+  build:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate 3D contribution graph
+        uses: yoshi389111/github-profile-3d-contrib@0.9.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          # This line is now using your new, powerful token
-          token: ${{ secrets.METRICS_PAT }}
-          user: AIMaster17
-          base: activity, community
+          commit_message: "chore: Update 3D contribution graph"
+          # Important: We tell it to only look for the SVG files
+          file_pattern: "*.svg"
