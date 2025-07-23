@@ -1,12 +1,9 @@
 name: GitHub Metrics
 
 on:
-  # Runs every 12 hours
   schedule:
     - cron: "0 */12 * * *"
-  # Allows you to run it manually
   workflow_dispatch:
-  # Run on push to main branch
   push:
     branches:
       - "main"
@@ -17,17 +14,9 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@v3.34
+      - uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          # Your GitHub username
+          # Using the most basic configuration
           user: AIMaster17
-          # The template to use
-          template: classic
-          # Include the following plugins
-          base: header, activity, community, repositories, metadata
-          plugin_lines: yes
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: full_year
-          # Set your timezone
-          config_timezone: Asia/Kolkata
+          base: activity, community
