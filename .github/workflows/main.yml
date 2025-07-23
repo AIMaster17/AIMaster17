@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: lowlighter/metrics@latest
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          # Using the most basic configuration
+          # This line is now using your new, powerful token
+          token: ${{ secrets.METRICS_PAT }}
           user: AIMaster17
           base: activity, community
