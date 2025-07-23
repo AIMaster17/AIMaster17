@@ -7,7 +7,6 @@
 -   Currently, I am expanding my skill set by learning **DevOps** to better understand the entire lifecycle of model development and deployment.
 -   👯 I’m always looking forward to collaborating on innovative open-source projects, especially in the AI/ML space.
 -   ✔ Ask me anything, I am happy to help and learn together!
--   Here's a link to my **resume** ([ADD YOUR RESUME LINK HERE]) and **portfolio website** ([ADD YOUR PORTFOLIO LINK HERE]).
 
 ### <h3> 💻 Tech-Stack </h3>
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
