@@ -104,7 +104,7 @@
 <!--   <b>Note:</b> Top languages is only a metric of the languages my public code consists of and doesn't reflect experience or skill level. -
   </p> -->
   
-![](./profile-3d-contrib/profile-night-rainbow.svg)
+![GitHub Metrics](metrics.svg)
 
 ## My Latest Blog Posts 👇
 <!-- HASHNODE_BLOG:START -->
