@@ -1,27 +1,33 @@
-name: GitHub 3D Profile
+name: GitHub Metrics
 
 on:
+  # Runs every 12 hours
   schedule:
     - cron: "0 */12 * * *"
+  # Allows you to run it manually
   workflow_dispatch:
+  # Run on push to main branch
+  push:
+    branches:
+      - "main"
 
 jobs:
-  build:
+  render-metrics:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Generate 3D contribution graph
-        uses: yoshi389111/github-profile-3d-contrib@0.9.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          USERNAME: ${{ github.repository_owner }}
-
-      - name: Commit and push changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+      - uses: lowlighter/metrics@v3.34
         with:
-          commit_message: "chore: Update 3D contribution graph"
-          file_pattern: profile-3d-contrib/*.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # Your GitHub username
+          user: AIMaster17
+          # The template to use
+          template: classic
+          # Include the following plugins
+          base: header, activity, community, repositories, metadata
+          plugin_lines: yes
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full_year
+          # Set your timezone
+          config_timezone: Asia/Kolkata
