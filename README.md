@@ -40,7 +40,7 @@
 
 ## 🔗 Contact Me
 
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/your-linkedin-username/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tejas03?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3ByPp4VQaPTACi0mo72jZJjA%3D%3D)
 [![instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/your-instagram-handle)
 
 ## 📊 Github Analytics
